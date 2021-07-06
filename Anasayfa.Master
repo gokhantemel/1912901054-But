@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Anasayfa.master.cs" Inherits="Gokhantemel_1912901054.Anasayfa" %>
+
+<%@ Register Src="~/UserControl/UyeGiris.ascx" TagPrefix="uc1" TagName="UyeGiris" %>
+<%@ Register Src="~/UserControl/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Anastil.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="anatablo" > 
+                <tr>
+            <td colspan="2" class="anacerceve">
+                <img  src="resim/pug-shutterstock_16_9_1622378414-880x495.jpg" /> 
+            </td>
+                </tr>
+                 <tr>
+                     <td  colspan="2" class="anacerceve">
+                         <uc1:UyeGiris runat="server" id="UyeGiris" />
+                     </td>
+                     </tr>
+                <tr>             
+                    <td class="anatablomenu anacerceve">
+
+                        <uc1:Menu runat="server" id="Menu" />
+                     </td>
+                     <td class="anatabloicerik anacerceve">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                     </td>
+                     
+                </tr>
+                <tr>
+                    <td colspan="2" class="anacerceve"></td>
+                      </tr>
+                    
+            </table>
+        </div>
+    </form>
+</body>
+</html>
